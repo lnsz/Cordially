@@ -1,5 +1,5 @@
 
-h1{
+.title1{
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 12px;
@@ -8,47 +8,16 @@ h1{
 	color: #00A79D;
 	margin-bottom: -10px;
 }
-h2{
+.title2{
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
-	letter-spacing: 5px;
+	letter-spacing: 7px;
 	font-size: 25px;
 	font-weight: lighter;
 	color: #000000;
 }
 input, button{
 	outline-style: none;
-}
-.ng-scope{
-	width: 100vw;
-	min-width: 0px;
-}
-.header{
-	height: 20vh;
-}
-.title{
-	width: 100%;
-	padding-bottom: 5%;
-}
-.login{
-	position: absolute;
-	transform: translate(-50%, 0%);
-	left: 50vw;
-	width: 25%;
-}
-
-.loginTextbox{
-	font-family: 'Raleway', sans-serif;
-	border-radius: 10px;
-	border-style: solid;
-	border-width: 0px;
-	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);  
-	font-size: 15px;
-	letter-spacing: 2px;
-	font-weight: lighter;
-	padding: 12px 0px 12px 5%;
-	width: 90%;
-
 }
 
 .navbar {
@@ -94,11 +63,96 @@ input, button{
 	-webkit-transition: all 0.5s ease-in-out 0s;
 	transition: all 0.5s ease-in-out 0s;
 }
-header, nav,  {
+header, nav {
     display: block;
 }
 a {
 	text-decoration: none;
+}
+.ng-scope{
+	width: 100vw;
+	min-width: 0px;
+}
+.header{
+	height: 20vh;
+}
+.title{
+	width: 100%;
+	padding-bottom: 5%;
+}
+.start{
+	position: absolute;
+	transform: translate(-50%, 0%);
+	left: 50vw;
+	width: 50%;
+}
+
+.emailTextbox{
+	font-family: 'Raleway', sans-serif;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 0px;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);  
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	padding: 15px 0px 15px 20px;
+	width: 60%;
+}
+#emailTextbox{
+		  -webkit-transition: all 0.5s ease;  
+  -moz-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  -ms-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+.extend{
+	width: 100%;
+}
+.loginTextbox{
+	font-family: 'Raleway', sans-serif;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 0px;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);  
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	padding: 15px 0px 15px 20px;
+	width: 100%;
+}
+.getstartedButton{
+	float: right;
+	font-family: 'Raleway', sans-serif;
+	background: #00A79D;
+	color: #FFFFFF;
+	border-width: 0px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	font-size: 15px;
+	border-radius: 10px;
+	padding: 15px 0px 15px 0px;
+	width: 35%;
+
+}
+#getstarted{
+  -webkit-transition: all 0.5s ease;  
+  -moz-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  -ms-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+.fadeOut{
+	opacity: 0;
+	position: absolute;
+}
+.getstartedButton:hover{
+	cursor: pointer;
+	background: #069a91;
+}
+.getstartedButton:active{
+	cursor: pointer;
+	background: #00A79D;
 }
 .loginButton{
 	font-family: 'Raleway', sans-serif;
@@ -109,8 +163,18 @@ a {
 	font-weight: lighter;
 	font-size: 15px;
 	border-radius: 10px;
-	padding: 12px 0px 12px 0px;
+	padding: 15px 0px 15px 0px;
 	width: 100%;
+}
+#loginButton{
+		  -webkit-transition: all 0.5s ease;  
+  -moz-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  -ms-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+.moveDown{
+	margin-top: 30%;
 }
 .loginButton:hover{
 	cursor: pointer;
@@ -127,4 +191,92 @@ a {
 	font-weight: lighter;
 	text-align: center;
 	color: #ec5757;
+}
+.overlay{
+	position: absolute;
+	background: grey;
+	width: 80vw;
+	height: 80vh;
+	transform: translate(-50%, -50%);
+	left: 50vw;
+	top: 50vh;
+	border-radius: 25px;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.login{
+	background: #FFFFFF;
+	border-radius: 20px;
+	position: absolute;
+	transform: translate(-50%, 0%);
+	top: 40%;
+	left: 50%;
+	height: 80vh;
+	width: 60vw;
+}
+.input{
+	position: absolute;
+	transform: translate(-50%, 0%);
+	left: 50%;
+	width: 40%;
+	top: 35%;
+}
+.close{
+	margin-top: 5px;
+	margin-right: 15px;
+}
+.google{
+	height: 30px;
+	margin-right: 5px;
+}
+.facebook{
+	height: 24px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 5px;
+}
+.googleButton{
+	position: absolute;
+	left: -10%;
+	background: #ec5757;
+	color: #FFFFFF;
+	font-family: 'Raleway', sans-serif;
+	border-width: 0px;
+	font-weight: lighter;
+	font-size: 12px;
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+}
+.googleButton:hover{
+	background: #dc5555;
+}
+.googleButton:active{
+	background: #ec5757;
+}
+.facebookButton{
+	position: absolute;
+	right: -10%;
+	background: #5793ec;
+	color: #FFFFFF;
+	font-family: 'Raleway', sans-serif;
+	border-width: 0px;
+	font-weight: lighter;
+	font-size: 12px;
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+}
+.facebookButton:hover{
+	background: #5284ce;
+}
+.facebookButton:active{
+	background: #5793ec;
+}
+#createPassword{
+	opacity: 1;
+  -webkit-transition: all 0.5s ease;  
+  -moz-transition: all 0.5s ease;  
+  -o-transition: all 0.5s ease;  
+  -ms-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
 }
