@@ -1,26 +1,73 @@
-h1{
-	position: absolute;
-	text-align: center;
-	top: 10%;
-	transform: translate(-50%, 0%);
-	left: 50%;
-}
 
+h1{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 12px;
+	font-size: 50px;
+	font-weight: lighter;
+	color: #00A79D;
+	margin-bottom: -10px;
+}
+h2{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 5px;
+	font-size: 25px;
+	font-weight: lighter;
+	color: #000000;
+}
+input, button{
+	outline-style: none;
+}
+.ng-scope{
+	width: 100vw;
+	min-width: 0px;
+}
+.header{
+	height: 20vh;
+}
+.title{
+	width: 100%;
+	padding-bottom: 5%;
+}
 .login{
-	position:absolute;
+	position: absolute;
 	transform: translate(-50%, 0%);
-	left: 50%;
-	top: 25%;
-	width:20%;
+	left: 50vw;
+	width: 25%;
 }
 
 .loginTextbox{
-	font-size: 25px;
-	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 0px;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);  
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	padding: 12px 0px 12px 5%;
+	width: 90%;
+
 }
 
 .loginButton{
-	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	background: #00A79D;
+	color: #FFFFFF;
+	border-width: 0px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	border-radius: 10px;
+	font-size: 15px;
+	padding: 12px 0px 12px 0px;
 	width: 100%;
-
+}
+.loginButton:hover{
+	cursor: pointer;
+	background: #069a91;
+}
+.loginButton:active{
+	cursor: pointer;
+	background: #00A79D;
 }

@@ -4,15 +4,24 @@
 		<title>Log In</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<h1>APP NAME</h1>
+		<div class="header">
+			<button><a href="#"></a></button>
+			<button><a href="#"></a></button>
+		</div>
+		<div class="title">
+			<h1>CORDIALLY</h1>
+			<h2>SIMPLIFY SCHEDULING</h2>
+		</div>
 		<div ng-controller="ctrl">
 			<div class="login">
-				<input class="loginTextbox" type="text" ng-model="username" /><br><br>
-				<input class="loginTextbox" type="password" ng-model="password" /><br><br><br>
-				<button class="loginButton" ng-click="login()">Log In</button><br><br>
-				<button class="loginButton" ng-click="createUser()">Create Account</button>
+				<input class="loginTextbox" type="text" placeholder="USERNAME" ng-model="username" /><br><br>
+				<input class="loginTextbox" type="password" placeholder="PASSWORD" ng-model="password" /><br><br><br>
+				<button class="loginButton" ng-click="login()">LOG IN</button><br><br>
+				<button class="loginButton" ng-click="createUser()">CREATE ACCOUNT</button>
 				<h3>{{errorMessage}}</h3>
 			</div>
 		</div>
