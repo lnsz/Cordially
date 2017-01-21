@@ -1,0 +1,130 @@
+
+h1{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 12px;
+	font-size: 50px;
+	font-weight: lighter;
+	color: #00A79D;
+	margin-bottom: -10px;
+}
+h2{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 5px;
+	font-size: 25px;
+	font-weight: lighter;
+	color: #000000;
+}
+input, button{
+	outline-style: none;
+}
+.ng-scope{
+	width: 100vw;
+	min-width: 0px;
+}
+.header{
+	height: 20vh;
+}
+.title{
+	width: 100%;
+	padding-bottom: 5%;
+}
+.login{
+	position: absolute;
+	transform: translate(-50%, 0%);
+	left: 50vw;
+	width: 25%;
+}
+
+.loginTextbox{
+	font-family: 'Raleway', sans-serif;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 0px;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);  
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	padding: 12px 0px 12px 5%;
+	width: 90%;
+
+}
+
+.navbar {
+    margin: 20px 0 30px;
+    font-size: 15px;
+    text-align: center;
+    text-align: right;
+    padding-right: 70px;
+    padding-top: 5px;
+}
+.navbar li {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    display: inline-block;
+    padding-left: 15px;
+}
+.navbar li:first-child {
+    margin-left: 0;
+}
+.navbar li a{
+	color: #000000;
+	font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+	font-weight: lighter;
+	border-radius: 10px;
+	font-size: 15px;
+    transition: color 0.25s ease-in-out;
+    position: relative;
+}
+.navbar li a:hover:before{
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+.navbar li a:before{
+	content: "";
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	position: absolute;
+	background-color: #000;
+	transform: scaleX(0);
+	-webkit-transform: scaleX(0);
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+}
+header, nav,  {
+    display: block;
+}
+a {
+	text-decoration: none;
+}
+.loginButton{
+	font-family: 'Raleway', sans-serif;
+	background: #00A79D;
+	color: #FFFFFF;
+	border-width: 0px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	font-size: 15px;
+	border-radius: 10px;
+	padding: 12px 0px 12px 0px;
+	width: 100%;
+}
+.loginButton:hover{
+	cursor: pointer;
+	background: #069a91;
+}
+.loginButton:active{
+	cursor: pointer;
+	background: #00A79D;
+}
+.errorMessage{
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	text-align: center;
+	color: #ec5757;
+}

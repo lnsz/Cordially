@@ -7,7 +7,7 @@ var ObjectID = mongodb.ObjectID;
 const url = 'mongodb://localhost:27017/myproject';
 
 var app = express();
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/../../public"));
 
 app.use(bodyParser.json())
 
@@ -43,11 +43,17 @@ app.post("/createUser", function(req, res){
 			if (document == null){
 				users.insertOne({ username: newUser.username, password: newUser.password});
 				res.status(200);
-			} else {
+				res.end();
+			}else{
 				res.status(500).json({"error": "username already exists"});
+				res.end();
 			}
 		} );
 	})
+});
+
+app.get("/", function(req, res){
+	res.sendFile(path.resolve("../../index.html"));
 });
 
 app.post("/login", function(req, res){
@@ -57,8 +63,10 @@ app.post("/login", function(req, res){
 		users.findOne({ username: newUser.username, password: newUser.password }, function(error, document){
 			if (document == null){
 				res.status(500).json({"error": "username or password is invalid"});
+				res.end();
 			}else{
-				res.status(500);
+				res.status(200);
+				res.end();
 			}
 		} );
 	})
@@ -93,6 +101,8 @@ app.post("/schedule", function(req, res) {
 						if ((start < apptStart && apptStart < end) || (start < apptEnd && apptEnd < end)) {
 							console.log(start, apptStart, end, start, apptEnd, end);
 							conflict = true;
+              res.status(500);
+              res.end();
 						}
 					}
 					if (conflict == false) {
@@ -101,14 +111,21 @@ app.post("/schedule", function(req, res) {
 						var cal = {};
 						cal[appointment.date] = updatedEvents;
 						calendars.update({ _id : appointment.userID }, {$set: cal });
+            
+            res.status(200);
+            res.end();
 					}
 				} else {
 					calendar[appointment.date] = [event];
+          res.status(200);
+          res.end();
 				}
 			} else {
 				var calendar = { _id: appointment.userID };
 				calendar[appointment.date] = [event];
 				calendars.insertOne(calendar)
+        res.status(200);
+        res.end();
 			}
 		});
 	})

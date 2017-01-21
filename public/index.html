@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Log In</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="header">
+			<nav class="navbar">
+                <ul class="list-pages">
+	                <li class=""><a href="#">FEATURES</a></li>
+	              	<li class=""><a href="#">PRICING</a></li>
+                </ul>
+            </nav>
+		</div>
+		<div class="title">
+			<h1>CORDIALLY</h1>
+			<h2>SIMPLIFY SCHEDULING</h2>
+		</div>
+		<div ng-controller="ctrl">
+			<div class="login">
+				<input class="loginTextbox" type="text" placeholder="USERNAME" ng-model="username" /><br><br>
+				<input class="loginTextbox" type="password" placeholder="PASSWORD" ng-model="password" /><br><br><br>
+				<button class="loginButton" ng-click="login()">LOG IN</button><br><br>
+				<button class="loginButton" ng-click="createUser()">CREATE ACCOUNT</button>
+				<h3 class="errorMessage">{{errorMessage}}</h3>
+			</div>
+		</div>
+		<script src="login.js"></script>
+
+	</body>
+</html>
