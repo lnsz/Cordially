@@ -43,8 +43,10 @@ app.post("/createUser", function(req, res){
 			if (document == null){
 				users.insertOne({ username: newUser.username, password: newUser.password});
 				res.status(200);
+				res.end();
 			}else{
 				res.status(500).json({"error": "username already exists"});
+				res.end();
 			}
 		} );
 	})
@@ -61,8 +63,10 @@ app.post("/login", function(req, res){
 		users.findOne({ username: newUser.username, password: newUser.password }, function(error, document){
 			if (document == null){
 				res.status(500).json({"error": "username or password is invalid"});
+				res.end();
 			}else{
-				res.status(500);
+				res.status(200);
+				res.end();
 			}
 		} );
 	})

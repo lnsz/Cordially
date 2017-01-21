@@ -2,15 +2,15 @@ h1{
 	position: absolute;
 	text-align: center;
 	top: 10%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0%);
 	left: 50%;
 }
 
 .login{
 	position:absolute;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0%);
 	left: 50%;
-	top: 35%;
+	top: 25%;
 	width:20%;
 }
 
