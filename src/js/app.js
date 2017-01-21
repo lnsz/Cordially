@@ -8,7 +8,12 @@ const url = 'mongodb://localhost:27017/myproject';
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.json());
+
+app.use(bodyParser.json())
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 var db;
 
@@ -28,4 +33,33 @@ mongodb.MongoClient.connect(url, function (err, database) {
     var port = server.address().port;
     console.log("Running on port", port);
   });
+});
+
+app.post("/createUser", function(req, res){
+	var newUser = req.body;
+	console.log(newUser.username);
+	db.collection("users", function(error, users){
+		users.findOne({ username: newUser.username }, function(error, document){
+			if (document == null){
+				users.insertOne({ username: newUser.username, password: newUser.password});
+				res.status(200);
+			}else{
+				res.status(500).json({"error": "username already exists"});
+			}
+		} );
+	})
+});
+
+app.post("/login", function(req, res){
+	var newUser = req.body;
+	console.log(newUser.username);
+	db.collection("users", function(error, users){
+		users.findOne({ username: newUser.username, password: newUser.password }, function(error, document){
+			if (document == null){
+				res.status(500).json({"error": "username or password is invalid"});
+			}else{
+				res.status(500);
+			}
+		} );
+	})
 });
