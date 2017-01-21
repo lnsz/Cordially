@@ -9,8 +9,12 @@
 	</head>
 	<body>
 		<div class="header">
-			<button><a href="#"></a></button>
-			<button><a href="#"></a></button>
+			<nav class="navbar">
+                <ul class="list-pages">
+	                <li class=""><a href="#">FEATURES</a></li>
+	              	<li class=""><a href="#">PRICING</a></li>
+                </ul>
+            </nav>
 		</div>
 		<div class="title">
 			<h1>CORDIALLY</h1>
@@ -22,7 +26,7 @@
 				<input class="loginTextbox" type="password" placeholder="PASSWORD" ng-model="password" /><br><br><br>
 				<button class="loginButton" ng-click="login()">LOG IN</button><br><br>
 				<button class="loginButton" ng-click="createUser()">CREATE ACCOUNT</button>
-				<h3>{{errorMessage}}</h3>
+				<h3 class="errorMessage">{{errorMessage}}</h3>
 			</div>
 		</div>
 		<script src="login.js"></script>

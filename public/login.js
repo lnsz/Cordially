@@ -13,7 +13,7 @@ app.controller("ctrl", function($scope, $http){
 		}).then(function successCallback(response) {
 			$scope.errorMessage = "";
 		}, function errorCallback(response) {
-			$scope.errorMessage = "Incorrect username or password";
+			$scope.errorMessage = "INCORRECT USERNAME OR PASSWORD";
 		});
 	}
 	$scope.createUser =  function(){
@@ -24,7 +24,7 @@ app.controller("ctrl", function($scope, $http){
 		}).then(function successCallback(response) {
 			$scope.errorMessage = "";
 		}, function errorCallback(response) {
-			$scope.errorMessage = "Username already exists";
+			$scope.errorMessage = "USERNAME IS TAKEN";
 		});
 	};
 });
