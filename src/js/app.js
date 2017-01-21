@@ -7,7 +7,7 @@ var ObjectID = mongodb.ObjectID;
 const url = 'mongodb://localhost:27017/myproject';
 
 var app = express();
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/../../public"));
 
 app.use(bodyParser.json())
 
@@ -48,6 +48,10 @@ app.post("/createUser", function(req, res){
 			}
 		} );
 	})
+});
+
+app.get("/", function(req, res){
+	res.sendFile(path.resolve("../../index.html"));
 });
 
 app.post("/login", function(req, res){
