@@ -1,0 +1,26 @@
+h1{
+	position: absolute;
+	text-align: center;
+	top: 10%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+}
+
+.login{
+	position:absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 35%;
+	width:20%;
+}
+
+.loginTextbox{
+	font-size: 25px;
+	width: 100%;
+}
+
+.loginButton{
+	font-size: 25px;
+	width: 100%;
+
+}
