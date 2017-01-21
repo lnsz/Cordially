@@ -63,3 +63,30 @@ app.post("/login", function(req, res){
 		} );
 	})
 });
+
+app.post("/schedule", function(req, res) {
+	var appointment = req.body;
+	db.collection("calendars", function(error, calendars) {
+		console.log(appointment.userID);
+		calendars.findOne({ _id: appointment.userID }, function(error, calendar) {
+			var event = {
+				time: appointment.time,
+				name: appointment.name,
+				desc: appointment.desc,
+				location: appointment.location,
+				priority: appointment.priority
+			};
+			if (calendar != null) {
+				if (calendar.appointment.date != null) {
+
+					calendar.appointment.date.push(event);
+				} else {
+					calendar.appointment.appointment.date = [event];
+				}
+			} else {
+				var date = appointment.date;
+				calendars.insertOne({ _id: appointment.userID, date: [event] })
+			}
+		});
+	})
+});
