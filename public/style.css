@@ -29,6 +29,7 @@ input, button{
     padding-top: 5px;
 }
 .navbar li {
+	padding-top: 14px;
     margin-bottom: 20px;
     margin-left: 30px;
     display: inline-block;
@@ -38,6 +39,7 @@ input, button{
     margin-left: 0;
 }
 .navbar li a{
+	text-decoration: none;
 	color: #000000;
 	font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
