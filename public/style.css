@@ -150,11 +150,13 @@ a {
 }
 .getstartedButton:hover{
 	cursor: pointer;
-	background: #069a91;
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
 }
 .getstartedButton:active{
 	cursor: pointer;
-	background: #00A79D;
+	-webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 .loginButton{
 	font-family: 'Raleway', sans-serif;
@@ -180,11 +182,13 @@ a {
 }
 .loginButton:hover{
 	cursor: pointer;
-	background: #069a91;
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
 }
 .loginButton:active{
 	cursor: pointer;
-	background: #00A79D;
+	-webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 .errorMessage{
 	font-family: 'Raleway', sans-serif;
@@ -251,10 +255,12 @@ a {
 	padding: 5px 10px 5px 10px;
 }
 .googleButton:hover{
-	background: #dc5555;
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
 }
 .googleButton:active{
-	background: #ec5757;
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
 }
 .facebookButton{
 	position: absolute;
@@ -269,10 +275,12 @@ a {
 	padding: 5px 10px 5px 10px;
 }
 .facebookButton:hover{
-	background: #5284ce;
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
 }
 .facebookButton:active{
-	background: #5793ec;
+	-webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 #createPassword{
 	opacity: 1;

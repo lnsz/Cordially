@@ -88,10 +88,9 @@ a {
 	color: #000;
 }
 .photoDiv{
-	
+	border-color:#00A79D;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #00A79D;
 	border-radius: 50%;
 	margin-top: 5%;
 	padding-top:2%;
@@ -175,10 +174,9 @@ input, button{
 	outline-style: none;
 }
 .timeButton{
-	width: 10vw;
-	height: 10vw;
+	width: 11vw;
+	height: 11vw;
 	border-radius: 50%;
-	margin-left: 30px;
 	border-style: solid;
 	border-width: 0px;
 	font-family: 'Raleway', sans-serif;
@@ -186,6 +184,14 @@ input, button{
 	font-size: 16px;
 	font-weight: lighter;
 	color: #FFF;
+}
+.timeButton:hover{
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
+}
+.timeButton:active{
+	-webkit-filter: brightness(100%);
+    filter: brightness(100%);
 }
 #custom{
 	background: #5793ec;
@@ -200,12 +206,13 @@ input, button{
 	background: rgb(223,167,60);
 }
 .switch {
-	position: relative;
-	display: inline-block;
+	transform: translate(-50%);
+	left: 50%;
+	top: 120%;
+	position: absolute;
 	width: 60px;
 	height: 34px;
-	margin-left: 10%;
-	margin-right: 6%;
+
 }
 
 /* Hide default HTML checkbox */
@@ -282,6 +289,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 .hideButtons{
+	display: inline-block;
 	margin-top: 3%;
 }
 
