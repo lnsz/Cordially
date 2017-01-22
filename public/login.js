@@ -30,9 +30,10 @@ app.controller("ctrl", function($scope, $http){
 $("#getstarted").click(function() {
   $('#getstarted').addClass('fadeOut');
   $('#emailTextbox').addClass('extend');
-  $('#loginButton').addClass('moveDown');
-  $('#loginButton').html('CREATE ACCOUNT');
-  $('#loginButton').attr('data-target', "");
-  $('#loginButton').attr('ng-click', "createUser()");
+  $('#loginButton1').addClass('moveDown');
+  $('#loginButton1').html('CREATE ACCOUNT');
+  $('#loginButton1').attr('data-target', "");
+  $('#loginButton1').attr('ng-click', "createUser()");
   $('#createPassword').addClass('fadeIn');
+
 });
