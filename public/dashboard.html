@@ -34,71 +34,72 @@
 				</div>
 				
 			</div>
-			<div class="right">
-				<h4 class="meetings">MEETINGS</h4>
-				<div class="timeButtons">
-					<div class="col-md-3">
-						<button class="timeButton" id="custom">CUSTOM</button>
-						 <label class="switch">
-						 	<input type="checkbox">
-						 	<div class="slider round" id="switch1"></div>
-						</label>
+				<div class="right">
+					<h4 class="meetings">MEETINGS</h4>
+					<div class="timeButtons">
+						<div class="col-md-3">
+							<button class="timeButton" id="custom">CUSTOM</button>
+							 <label class="switch">
+							 	<input type="checkbox">
+							 	<div class="slider round" id="switch1"></div>
+							</label>
+						</div>
+						<div class="col-md-3">
+							<button class="timeButton" id="min15">15 MINUTES</button>
+							<label class="switch" id="switch2">
+							    <input type="checkbox">
+								<div class="slider round" id="switch2"></div>
+							</label>
+						</div>
+						<div class="col-md-3">
+							<button class="timeButton" id="min30">30 MINUTES</button>
+							<label class="switch" id="switch3">
+						 		<input type="checkbox">
+						  		<div class="slider round" id="switch3"></div>
+							</label>
+						</div>
+						<div class="col-md-3">
+							<button class="timeButton" id="min60">60 MINUTES</button>
+							<label class="switch" id="switch4">
+						 		<input type="checkbox">
+						 		<div class="slider round" id="switch4"></div>
+							</label>
+						</div>
 					</div>
-					<div class="col-md-3">
-						<button class="timeButton" id="min15">15 MINUTES</button>
-						<label class="switch" id="switch2">
-						    <input type="checkbox">
-							<div class="slider round" id="switch2"></div>
-						</label>
-					</div>
-					<div class="col-md-3">
-						<button class="timeButton" id="min30">30 MINUTES</button>
-						<label class="switch" id="switch3">
-					 		<input type="checkbox">
-					  		<div class="slider round" id="switch3"></div>
-						</label>
-					</div>
-					<div class="col-md-3">
-						<button class="timeButton" id="min60">60 MINUTES</button>
-						<label class="switch" id="switch4">
-					 		<input type="checkbox">
-					 		<div class="slider round" id="switch4"></div>
-						</label>
-					</div>
-				</div>
 			</div>
-			<div ng-controller="ctrl">
+			
+			</div>
+		</div>
+		<div ng-controller="ctrl">
 				<div class="calendar">
 					<div class="month"> 
-					    <button class="prev" ng-click="previousMonth()">&#10094;</button>
-					    <button class="next" ng-click="nextMonth()">&#10095;</button>
+					    <button class="prev" ng-click="previousYear()">&#10094;</button>
+					    <button class="next" ng-click="nextYear()">&#10095;</button>
 					    <h6 class="date">{{months[currentMonth-1]}}, {{currentYear}}</h6>
 					    <div class="months">
-					    	<div class="col-xs-1"><button class="monthButton">JANUARY</button></div>
-							<div class="col-sm-1"><button class="monthButton">FEBRUARY</button></div>
-							<div class="col-sm-1"><button class="monthButton">MARCH</button></div>
-							<div class="col-sm-1"><button class="monthButton">APRIL</button></div>
-							<div class="col-sm-1"><button class="monthButton">MAY</button></div>
-							<div class="col-sm-1"><button class="monthButton">JUNE</button></div>
-							<div class="col-sm-1"><button class="monthButton">JULY</button></div>
-							<div class="col-sm-1"><button class="monthButton">AUGUST</button></div>
-							<div class="col-sm-1"><button class="monthButton">SEPEMBER</button></div>
-							<div class="col-sm-1"><button class="monthButton">OCTOBER</button></div>
-							<div class="col-sm-1"><button class="monthButton">NOVEMBER</button></div>
-							<div class="col-sm-1"><button class="monthButton">OCTOBER</button></div>
-							<div class="col-sm-1"><button class="monthButton">NOVEMBER</button></div>
-							<div class="col-sm-1"><button class="monthButton">DECEMBER</button></div>
+					    	<div ><button class="monthButton" ng-click="setMonth(1)">JANUARY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(2)">FEBRUARY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(3)">MARCH</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(4)">APRIL</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(5)">MAY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(6)">JUNE</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(7)">JULY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(8)">AUGUST</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(9)">SEPEMBER</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(10)">OCTOBER</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(11)">NOVEMBER</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(12)">DECEMBER</button></div>
 					    </div>
 					</div>
 
 					<ul class="weekdays">
-					  <li>Mo</li>
-					  <li>Tu</li>
-					  <li>We</li>
-					  <li>Th</li>
-					  <li>Fr</li>
-					  <li>Sa</li>
-					  <li>Su</li>
+					  <li>MON</li>
+					  <li>TUE</li>
+					  <li>WED</li>
+					  <li>THU</li>
+					  <li>FRI</li>
+					  <li>SAT</li>
+					  <li>SUN</li>
 					</ul>
 
 					<ul class="days"> 
@@ -135,8 +136,6 @@
 					  <li>31</li>
 					</ul>
 				</div>
-			</div>
-		</div>
 		<script src="calendar.js"></script>
 	</body>
 </html>

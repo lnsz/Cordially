@@ -18,6 +18,7 @@ app.controller("ctrl", function($scope, $http){
 	}
 	$scope.createUser =  function(){
 		if($scope.isClickable){
+			console.log($scope.username);
 			$http.post("/createUser", {
 				username: $scope.username, 
 				password: $scope.password
@@ -35,7 +36,7 @@ app.controller("ctrl", function($scope, $http){
 	  $('#loginButton1').html('CREATE ACCOUNT');
 	  $('#loginButton1').attr('data-target', "");
 	  $('#createPassword').addClass('fadeIn');
- 		console.log($scope.isClickable );
+	  $scope.isClickable = true;
 	});
 });
 

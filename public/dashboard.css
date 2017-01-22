@@ -1,3 +1,11 @@
+button:hover, a:hover{
+	-webkit-filter: brightness(90%);
+    filter: brightness(90%);
+}
+button:active, a:active{
+	-webkit-filter: brightness(100%);
+    filter: brightness(100%);
+}
 .name{
 	text-align: left;
 	font-family: 'Raleway', sans-serif;
@@ -21,7 +29,6 @@
 	background: rgb(235,235,235);
 	height: 65vh;
 	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);  
-
 }
 
 .navbar {
@@ -215,12 +222,10 @@ input, button{
 
 }
 
-/* Hide default HTML checkbox */
 .switch input {
 	display:none;
 }
 
-/* The slider */
 .slider {
 	position: absolute;
 	cursor: pointer;
@@ -280,7 +285,6 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
@@ -293,20 +297,33 @@ input:checked + .slider:before {
 	margin-top: 3%;
 }
 
-/* Month header */
 .month {
     width: 100%;
     background: white;
     padding-bottom: 0px;
 }
+.col-sm-1{
+	padding: none;
+	margin: none;
+}
+.months{
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 80%;
+}
 .months button{
+	margin-left: 25px;
+	position: relative;
+	float: left;
 	padding: none;
 	margin: none;
 	background: white;
 	border: none;
+	color: #00A79D;
 }
 .date{
-	padding-left: 100px;
+	padding-left: 50px;
 	padding-top: 50px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 25px;
@@ -333,15 +350,15 @@ input:checked + .slider:before {
     color: #00A79D;
 }
 .weekdays {
-    margin-top: 100px;
-    background-color:#ddd;
+    margin-top: 50px;
+    background-color: none;
 }
 
 .weekdays li {
 
     display: inline-block;
     width: 13.6%;
-    color: #666;
+    color: #00A79D;
     text-align: center;
 }
 
@@ -354,14 +371,17 @@ input:checked + .slider:before {
 }
 
 .days li {
-
+	border-width: 1px;
+	border-style: solid;
+	border-color: #00A79D;
     list-style-type: none;
     display: inline-block;
     width: 13.6%;
+    height: ;
     text-align: center;
     margin-bottom: 5px;
     font-size:12px;
-    color:#777;
+    color:#000;
 }
 
 /* Highlight the "current" day */
@@ -370,4 +390,13 @@ input:checked + .slider:before {
     background: white;
     color:   #68c6bf !important
 }
+.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin-left: 15px; }
+
 
