@@ -32,13 +32,35 @@ app.controller("ctrl", function($scope, $http, $window){
 		};
 	}
 	$("#getstarted").click(function() {
+	  $('#getstarted').removeClass('delay');
+
+	  $('.loginButton1').removeClass('delay');
+	  $('.passwordTextbox').addClass('delay');
+	  $('.emailTextbox').addClass('delay');
+
 	  $('#getstarted').addClass('fadeOut');
 	  $('#emailTextbox').addClass('extend');
 	  $('#loginButton1').addClass('moveDown');
 	  $('#loginButton1').html('CREATE ACCOUNT');
 	  $('#loginButton1').attr('data-target', "");
-	  $('#createPassword').addClass('fadeIn');
+	  $('#passwordTextbox').addClass('fadeIn');
+	  $('#backButton').addClass('fadeBack');
 	  $scope.isClickable = true;
+	});
+    $("#backButton").click(function() {
+      $('#getstarted').addClass('delay');
+	  $('.emailTextbox').removeClass('delay');
+	  $('.loginButton1').addClass('delay');
+	  $('.passwordTextbox').removeClass('delay');
+
+	  $('#getstarted').removeClass('fadeOut');
+	  $('#emailTextbox').removeClass('extend');
+	  $('#loginButton1').removeClass('moveDown');
+	  $('#loginButton1').html('LOG IN');
+	  $('#loginButton1').attr('data-target', "#modal");
+	  $('#passwordTextbox').removeClass('fadeIn');
+	  $('#backButton').removeClass('fadeBack');
+	  $scope.isClickable = false;
 	});
 });
 

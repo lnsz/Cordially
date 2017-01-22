@@ -28,10 +28,11 @@
 				<div  class="photoDiv">
 					<img class="img-circle img-center photo" src="Assets/test.jpg">
 				</div>
-				<h4 class="availability">UPDATE AVAILABILITY</h4>
+				<h4 class="availability">CONTACT INFORMATION</h4>
 				<div class="statusDiv">
-					<h5 class="status">AVAILABLE</h5>
-					<h5 class="status">UNAVAILABLE</h5>
+					<h5 class="status">(123)-456-7890</h5>
+					<h5 class="status">emailadress@mail.com</h5>
+					<h5 class="status">schedule.html?username=lucas</h5>
 				</div>
 				
 			</div>
@@ -39,30 +40,30 @@
 					<h4 class="meetings">MEETINGS</h4>
 					<div class="timeButtons">
 						<div class="col-md-3">
-							<button class="timeButton" id="custom">CUSTOM</button>
+							 <button class="timeButton" id="custom" onclick="document.getElementById('checkbox1').checked=!document.getElementById('checkbox1').checked;">CUSTOM</button>
 							 <label class="switch">
-							 	<input type="checkbox">
+							 	<input type="checkbox" id="checkbox1">
 							 	<div class="slider round" id="switch1"></div>
 							</label>
 						</div>
 						<div class="col-md-3">
-							<button class="timeButton" id="min15">15 MINUTES</button>
+							<button class="timeButton" id="min15" onclick="document.getElementById('checkbox2').checked=!document.getElementById('checkbox2').checked;">15 MINUTES</button>
 							<label class="switch" id="switch2">
-							    <input type="checkbox">
+							    <input type="checkbox" id="checkbox2">
 								<div class="slider round" id="switch2"></div>
 							</label>
 						</div>
 						<div class="col-md-3">
-							<button class="timeButton" id="min30">30 MINUTES</button>
+							<button class="timeButton" id="min30" onclick="document.getElementById('checkbox3').checked=!document.getElementById('checkbox3').checked;">30 MINUTES</button>
 							<label class="switch" id="switch3">
-						 		<input type="checkbox">
+						 		<input type="checkbox" id="checkbox3">
 						  		<div class="slider round" id="switch3"></div>
 							</label>
 						</div>
 						<div class="col-md-3">
-							<button class="timeButton" id="min60">60 MINUTES</button>
+							<button class="timeButton" id="min60" onclick="document.getElementById('checkbox4').checked=!document.getElementById('checkbox4').checked;">60 MINUTES</button>
 							<label class="switch" id="switch4">
-						 		<input type="checkbox">
+						 		<input type="checkbox" id="checkbox4">
 						 		<div class="slider round" id="switch4"></div>
 							</label>
 						</div>
@@ -72,7 +73,7 @@
 			</div>
 		</div>
 		<div ng-controller="ctrl">
-				<div class="calendar">
+				<div class="calendar" id="calendar">
 					<div class="month"> 
 					    <button class="prev" ng-click="previousYear()">&#10094;</button>
 					    <button class="next" ng-click="nextYear()">&#10095;</button>
@@ -117,7 +118,8 @@
 						</div>
 					</div>
 				</div>
-				</div>
+			</div>
+			<div id="end"></div>
 		<script src="calendar.js"></script>
 	</body>
 </html>

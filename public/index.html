@@ -31,9 +31,10 @@
 		<div ng-controller="ctrl">
 			<div class="start">
 				<input class="emailTextbox" id="emailTextbox" type="text" placeholder="TYPE YOUR EMAIL" ng-model="username" />
-				<input type="password" class="transition emailTextbox" id="createPassword" placeholder="PASSWORD" ng-model="password" />
+				<input type="password" class="passwordTextbox" id="passwordTextbox" placeholder="PASSWORD" ng-model="password" />
 				<button class="getstartedButton" id="getstarted" onclick="">GET STARTED FOR FREE</button>
 				<button class="loginButton1" id="loginButton1" data-toggle="modal" data-target="#modal" ng-click="createUser()" />LOG IN</button>
+				<button class="backButton" id="backButton" ng-click="back()" />BACK</div>
 				<h3 class="errorMessage">{{errorMessage}}</h3>
 			</div>
 			<div class="container">
@@ -51,7 +52,7 @@
 									<br><br><br><br><br><br><br>
 								    <input class="loginTextbox" type="text" placeholder="TYPE YOUR EMAIL" ng-model="username" /><br><br>
 								    <input class="loginTextbox" type="password" placeholder="PASSWORD" ng-model="password" /><br><br>
-								    <button class="loginButton2" ng-click="login()">LOG IN</button><br>
+								    <button class="loginButton2" id="loginButton2" ng-click="login()">LOG IN</button><br>
 								    <h3 class="errorMessage">{{errorMessage}}</h3>
 								</div>
 						    </div>
