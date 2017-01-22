@@ -504,3 +504,10 @@ a {
 	-webkit-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
+.logo{
+	position: absolute;
+	transform: translate(-50%);
+	left: 50vw;
+	width: 100px;
+	top: 12vh;
+}
