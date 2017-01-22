@@ -24,11 +24,10 @@ app.controller("ctrl", function($scope, $http, $location){
         }else{
             $scope.invisible = true;
         }
-
     });
     $scope.name = $location.search()._id;
-    $scope.getAvailability = function(eventDuration, medium){
-        console.log(eventDuration + " " + medium);
+    $scope.scheduleEvent = function(eventDuration){
+        window.location = "/process.html?username=" + $scope.name + "&duration=" + eventDuration;
     };
 
     $scope.colour = function(colour){

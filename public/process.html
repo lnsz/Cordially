@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Dashboard</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="dashboard.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-clockpicker.min.css">
+		<script type="text/javascript" src="bootstrap-clockpicker.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<nav class="navbar">
+				<a href="index.html"><h1 class="name">CORDIALLY</h1></a>
+
+			    <ul class="list-pages">
+					<li ><a href="features.html">FEATURES</a></li>
+				    <li ><a href="pricing.html">PRICING</a></li>
+			    </ul>
+			</nav>
+		</div>
+		<div ng-controller="ctrl">
+				<div class="calendar" id="calendar">
+					<div class="month"> 
+					    <button class="prev" ng-click="previousYear()">&#10094;</button>
+					    <button class="next" ng-click="nextYear()">&#10095;</button>
+					    <h6 class="date">{{months[currentMonth-1]}}, {{currentYear}}</h6>
+					    <div class="months">
+					    	<div ><button class="monthButton" ng-click="setMonth(1)">JANUARY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(2)">FEBRUARY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(3)">MARCH</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(4)">APRIL</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(5)">MAY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(6)">JUNE</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(7)">JULY</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(8)">AUGUST</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(9)">SEPEMBER</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(10)">OCTOBER</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(11)">NOVEMBER</button></div>
+							<div ><button class="monthButton" ng-click="setMonth(12)">DECEMBER</button></div>
+					    </div>
+					</div>
+
+					<ul class="weekdays">
+					  <li>SUNDAY</li>
+					  <li>MONDAY</li>
+					  <li>TUESDAY</li>
+					  <li>WEDNESDAY</li>
+					  <li>THURSDAY</li>
+					  <li>FRIDAY</li>
+					  <li>SATURDAY</li>
+					</ul>
+
+					<ul class="days"> 
+						<div ng-repeat="a in range(extraDays) track by $index"><li><button class="day"></button></li></div>
+						<div ng-repeat="a in range(numDays) track by $index" class="daySelect"><li>{{$index + 1}}</li></div>
+					</ul>
+					<div id="modal" class="modal fade" role="dialog">
+					<div class = "modal-dialog">
+						<div class="modal-content"> 
+						    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						    <br><br>
+						    <div width="40vw"><h4 class="meetings" text-align="center" width="100%">&nbsp;MEETINGS ON {{months[currentMonth-1]}} {{selectedDay}}, {{currentYear}}</h4></div>
+						    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input id="input-a">
+			<div id="end"></div>
+		<script src="calendar.js"></script>
+		<script>
+		var input = $('#input-a');
+		input.clockpicker({
+		    autoclose: true
+		});
+ 		$(document).on('click','.daySelect', function(e){
+		    // Have to stop propagation here
+		    console.log('hu');
+		    e.stopPropagation();
+		    input.clockpicker('show')
+		            .clockpicker('toggleView', 'hours');
+		});
+ 		</script>
+	</body>
+</html>
