@@ -154,7 +154,7 @@ a {
 .meetings{
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 3px;
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: lighter;
 	color: #000;
 	margin-top: 14px;
@@ -254,7 +254,7 @@ input:focus + #switch1{
 }
 
 input:checked + #switch2 {
-  	background-color:  #68c6bf
+  	background-color:  #68c6bf;
 }
 
 input:focus + #switch2 {
@@ -291,5 +291,83 @@ input:checked + .slider:before {
 .hideButtons{
 	display: inline-block;
 	margin-top: 3%;
+}
+
+/* Month header */
+.month {
+    width: 100%;
+    background: white;
+    padding-bottom: 0px;
+}
+.months button{
+	padding: none;
+	margin: none;
+	background: white;
+	border: none;
+}
+.date{
+	padding-left: 100px;
+	padding-top: 50px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 25px;
+    color:  black;
+    letter-spacing: 3px;
+}
+.month .prev {
+    float: left;
+    margin-top: 90px;
+	margin-left: 50px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #00A79D;
+}
+
+.month .next {
+    float: right;
+    margin-top: 90px;
+	margin-right: 50px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #00A79D;
+}
+.weekdays {
+    margin-top: 100px;
+    background-color:#ddd;
+}
+
+.weekdays li {
+
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 5px;
+    background: white;
+    color:   #68c6bf !important
 }
 
