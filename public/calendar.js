@@ -6,23 +6,13 @@ app.controller("ctrl", function($scope){
 	$scope.currentDay = 21;
 	$scope.currentYear = 2017;
 	$scope.nextMonth =  function(){
-		if($scope.currentMonth < 12){
-			$scope.currentMonth++;
-		}
-		else{
-			$scope.currentYear++;
-			$scope.currentMonth = 1;
-		}
+		$scope.currentYear++;
 	};
-	$scope.previousMonth =  function(){
-		if($scope.currentMonth > 1){
-			$scope.currentMonth--;
-		}
-		else{
-			$scope.currentYear--;
-			$scope.currentMonth = 12;
-		}
+	$scope.previousYear =  function(){
+		$scope.currentYear--;
 	};
-
+	$scope.setMonth =  function(month){
+		$scope.currentMonth = month;
+	};
 
 });
