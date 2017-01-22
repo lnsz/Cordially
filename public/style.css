@@ -67,8 +67,6 @@ input, button{
 	-webkit-transform: scaleX(0);
 	-webkit-transition: all 0.5s ease-in-out 0s;
 	transition: all 0.5s ease-in-out 0s;
-
-
 }
 header, nav {
     display: block;
@@ -402,13 +400,52 @@ a {
 .bubbles{
 	margin-top: 150px;
 }
-.schedule-info{
+.schedule-info, .pricing-info{
 	width: 100%;
     background: rgb(235,235,235);
     height: 85vh;
     box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
     z-index: -100;
 }
+<<<<<<< HEAD
+.pricing-info-header{
+	padding-top: 2.5em;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+.pricing-info-details{
+	width: 60%;
+	text-align: center;
+	transform: translate(-50%,0);
+	left: 50%;
+	position: absolute;
+	font-family: 'Raleway', sans-serif;
+	padding-top: 1em;
+}
+.price{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 4em;
+	padding-top: 2em;
+}
+.join-button{
+	text-align: center;
+	transform: translate(-50%,0);
+	left: 50%;
+	position: absolute;
+	float: right;
+	font-family: 'Raleway', sans-serif;
+	background: #00A79D;
+	color: #FFFFFF;
+	border-width: 0px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	font-size: 15px;
+	border-radius: 10px;
+	padding: 15px 0px 15px 0px;
+	width: 35%;
+}
+=======
 .preview{
 	margin-left: 80vh;
 	vertical-align: middle;
@@ -419,4 +456,5 @@ a {
 	position: relative;
 	margin-top: 50px;
 	margin-left: 20px;
+>>>>>>> jessecordeiro/master
 }
