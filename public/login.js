@@ -32,10 +32,10 @@ app.controller("ctrl", function($scope, $http, $window){
 		};
 	}
 	$("#getstarted").click(function() {
-	  $('.getstarted').removeClass('delay');
+	  $('#getstarted').removeClass('delay');
 
 	  $('.loginButton1').removeClass('delay');
-	  $('#createPassword').addClass('delay');
+	  $('.passwordTextbox').addClass('delay');
 	  $('.emailTextbox').addClass('delay');
 
 	  $('#getstarted').addClass('fadeOut');
@@ -43,22 +43,22 @@ app.controller("ctrl", function($scope, $http, $window){
 	  $('#loginButton1').addClass('moveDown');
 	  $('#loginButton1').html('CREATE ACCOUNT');
 	  $('#loginButton1').attr('data-target', "");
-	  $('#createPassword').addClass('fadeIn');
+	  $('#passwordTextbox').addClass('fadeIn');
 	  $('#backButton').addClass('fadeBack');
 	  $scope.isClickable = true;
 	});
     $("#backButton").click(function() {
-      $('.getstarted').addClass('delay');
+      $('#getstarted').addClass('delay');
 	  $('.emailTextbox').removeClass('delay');
 	  $('.loginButton1').addClass('delay');
-	  $('#createPassword').removeClass('delay');
+	  $('.passwordTextbox').removeClass('delay');
 
 	  $('#getstarted').removeClass('fadeOut');
 	  $('#emailTextbox').removeClass('extend');
 	  $('#loginButton1').removeClass('moveDown');
 	  $('#loginButton1').html('LOG IN');
 	  $('#loginButton1').attr('data-target', "#modal");
-	  $('#createPassword').removeClass('fadeIn');
+	  $('#passwordTextbox').removeClass('fadeIn');
 	  $('#backButton').removeClass('fadeBack');
 	  $scope.isClickable = false;
 	});
