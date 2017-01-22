@@ -31,13 +31,10 @@
 		<div ng-controller="ctrl">
 			<div class="start">
 				<input class="emailTextbox" id="emailTextbox" type="text" placeholder="TYPE YOUR EMAIL" ng-model="username" />
-				<!-- <input class="emailTextbox" type="password" id="createPassword" placeholder="PASSWORD" ng-model="password" /><br><br> -->
-				<button class="getstartedButton" id="getstarted" onclick="">GET STARTED FOR FREE</button><br><br>
-				<button type="button" class="getstartedButton" id="loginButton" data-toggle="modal" data-target="#modal">LOG IN</button><br><br>
-
-				<!-- <button class="loginButton" ng-click="createUser()">CREATE ACCOUNT</button> -->
-				<!-- <button class="loginButton" ng-click="login()">LOG IN</button><br><br>
-				<button class="loginButton" ng-click="createUser()">CREATE ACCOUNT</button> -->
+				<input type="password" class="transition emailTextbox" id="createPassword" placeholder="PASSWORD" ng-model="password" />
+				<button class="getstartedButton" id="getstarted" onclick="">GET STARTED FOR FREE</button>
+				<button class="loginButton1" id="loginButton1" data-toggle="modal" data-target="#modal" ng-click="createUser()" />LOG IN</button>
+				<h3 class="errorMessage">{{errorMessage}}</h3>
 			</div>
 			<div class="container">
 				<div id="modal" class="modal fade" role="dialog">
@@ -52,10 +49,9 @@
 									<button class="googleButton"><img class="google" src="/assets/g-logo.png">SIGN IN WITH GOOGLE</button>
 									<button class="facebookButton"><img class="facebook" src="/assets/f-logo.png">SIGN IN WITH FACEBOOK</button>
 									<br><br><br><br><br><br><br>
-
 								    <input class="loginTextbox" type="text" placeholder="TYPE YOUR EMAIL" ng-model="username" /><br><br>
 								    <input class="loginTextbox" type="password" placeholder="PASSWORD" ng-model="password" /><br><br>
-								    <button class="loginButton" ng-click="login()">LOG IN</button><br>
+								    <button class="loginButton2" ng-click="login()">LOG IN</button><br>
 								    <h3 class="errorMessage">{{errorMessage}}</h3>
 								</div>
 						    </div>

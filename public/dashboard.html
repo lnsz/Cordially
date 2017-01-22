@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 	<head>
 		<title>Dashboard</title>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -67,7 +67,76 @@
 					</div>
 				</div>
 			</div>
-		</div>
+			<div ng-controller="ctrl">
+				<div class="calendar">
+					<div class="month"> 
+					    <button class="prev" ng-click="previousMonth()">&#10094;</button>
+					    <button class="next" ng-click="nextMonth()">&#10095;</button>
+					    <h6 class="date">{{months[currentMonth-1]}}, {{currentYear}}</h6>
+					    <div class="months">
+					    	<div class="col-xs-1"><button class="monthButton">JANUARY</button></div>
+							<div class="col-sm-1"><button class="monthButton">FEBRUARY</button></div>
+							<div class="col-sm-1"><button class="monthButton">MARCH</button></div>
+							<div class="col-sm-1"><button class="monthButton">APRIL</button></div>
+							<div class="col-sm-1"><button class="monthButton">MAY</button></div>
+							<div class="col-sm-1"><button class="monthButton">JUNE</button></div>
+							<div class="col-sm-1"><button class="monthButton">JULY</button></div>
+							<div class="col-sm-1"><button class="monthButton">AUGUST</button></div>
+							<div class="col-sm-1"><button class="monthButton">SEPEMBER</button></div>
+							<div class="col-sm-1"><button class="monthButton">OCTOBER</button></div>
+							<div class="col-sm-1"><button class="monthButton">NOVEMBER</button></div>
+							<div class="col-sm-1"><button class="monthButton">OCTOBER</button></div>
+							<div class="col-sm-1"><button class="monthButton">NOVEMBER</button></div>
+							<div class="col-sm-1"><button class="monthButton">DECEMBER</button></div>
+					    </div>
+					</div>
 
+					<ul class="weekdays">
+					  <li>Mo</li>
+					  <li>Tu</li>
+					  <li>We</li>
+					  <li>Th</li>
+					  <li>Fr</li>
+					  <li>Sa</li>
+					  <li>Su</li>
+					</ul>
+
+					<ul class="days"> 
+					  <li>1</li>
+					  <li>2</li>
+					  <li>3</li>
+					  <li>4</li>
+					  <li>5</li>
+					  <li>6</li>
+					  <li>7</li>
+					  <li>8</li>
+					  <li>9</li>
+					  <li><span class="active">10</span></li>
+					  <li>11</li>
+					  <li>12</li>
+				  	  <li>13</li>
+					  <li>14</li>
+					  <li>15</li>
+					  <li>16</li>
+					  <li>17</li>
+					  <li>18</li>
+					  <li>19</li>
+					  <li>20</li>
+				  	  <li>21</li>
+					  <li>22</li>
+					  <li>23</li>
+					  <li>24</li>
+					  <li>25</li>
+					  <li>26</li>
+					  <li>27</li>
+					  <li>28</li>
+					  <li>29</li>
+					  <li>30</li>
+					  <li>31</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="calendar.js"></script>
 	</body>
 </html>
