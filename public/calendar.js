@@ -12,9 +12,14 @@ app.controller("ctrl", function($scope){
 	$scope.currentMonth = $scope.thisMonth;
 	$scope.currentYear = $scope.thisYear;
 
+	$scope.selectedDay = $scope.thisDay;
+
 	$scope.numDays = 31;
 	$scope.extraDays = findExtraDays($scope.currentDay, $scope.currentMonth, $scope.currentYear);
 	
+	$scope.selectDay = function(day){
+		$scope.selectedDay = day;
+	}
 
 	$scope.nextYear =  function(){
 		$scope.currentYear++;

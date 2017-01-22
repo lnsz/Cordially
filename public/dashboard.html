@@ -13,10 +13,11 @@
 	<body>
 		<div class="header">
 			<nav class="navbar">
-				<h1 class="name">CORDIALLY</h1>
+				<a href="index.html"><h1 class="name">CORDIALLY</h1></a>
 			    <ul class="list-pages">
-					<li ><a href="#">FEATURES</a></li>
-				    <li ><a href="#">PRICING</a></li>
+					<li ><a href="dashboard.html">DASHBOARD</a></li>
+				    <li ><a href="https://github.com/jessecordeiro/UofTHack2017">HELP</a></li>
+				    <li ><a href="#">&#9881;</a></li>
 			    </ul>
 			</nav>
 		</div>
@@ -104,8 +105,18 @@
 
 					<ul class="days"> 
 						<div ng-repeat="a in range(extraDays) track by $index"><li><button class="day"></button></li></div>
-						<div ng-repeat="a in range(numDays) track by $index"><li>{{$index + 1}}<button class="day"></button></li></div>
+						<div ng-repeat="a in range(numDays) track by $index"><li>{{$index + 1}}<button data-toggle="modal" data-target="#modal" class="day" ng-click="selectDay($index + 1)"></button></li></div>
 					</ul>
+					<div id="modal" class="modal fade" role="dialog">
+					<div class = "modal-dialog">
+						<div class="modal-content"> 
+						    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						    <br><br>
+						    <div width="40vw"><h4 class="meetings" text-align="center" width="100%">&nbsp;MEETINGS ON {{months[currentMonth-1]}} {{selectedDay}}, {{currentYear}}</h4></div>
+						    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+						</div>
+					</div>
+				</div>
 				</div>
 		<script src="calendar.js"></script>
 	</body>

@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 
-app.controller("ctrl", function($scope, $http){
+app.controller("ctrl", function($scope, $http, $window){
 	$scope.username = "";
 	$scope.password = "";
 	$scope.errorMessage = "";
@@ -12,6 +12,7 @@ app.controller("ctrl", function($scope, $http){
 			password: $scope.password
 		}).then(function successCallback(response) {
 			$scope.errorMessage = "";
+			$window.location.href = "/dashboard.html";
 		}, function errorCallback(response) {
 			$scope.errorMessage = "INCORRECT USERNAME OR PASSWORD";
 		});
@@ -24,6 +25,7 @@ app.controller("ctrl", function($scope, $http){
 				password: $scope.password
 			}).then(function successCallback(response) {
 				$scope.errorMessage = "";
+				$window.location.href = "/dashboard.html";
 			}, function errorCallback(response) {
 				$scope.errorMessage = "USERNAME IS TAKEN";
 			});
