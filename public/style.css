@@ -134,6 +134,7 @@ a {
 	position: absolute;
 	right: 0%;
 	top: 0%;
+	z-index:1;
 	font-family: 'Raleway', sans-serif;
 	background: #00A79D;
 	color: #FFFFFF;
@@ -157,6 +158,7 @@ a {
 }
 .fadeOut{
 	opacity: 0;
+	z-index:-1;
 }
 .getstartedButton:hover{
 	cursor: pointer;
@@ -343,7 +345,7 @@ a {
 }
 .fadeIn{
 
-	z-index:1;
+	z-index:1 !important;
 	left:0px !important;
 	top:0px !important;
 	position: relative !important;
