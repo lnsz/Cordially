@@ -366,7 +366,6 @@ input:checked + .slider:before {
     text-align: center;
 }
 
-/* Days (1-31) */
 .days {
 
 	width: 84vw;
