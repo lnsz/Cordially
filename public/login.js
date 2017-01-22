@@ -61,6 +61,7 @@ app.controller("ctrl", function($scope, $http, $window){
 	  $('#passwordTextbox').removeClass('fadeIn');
 	  $('#backButton').removeClass('fadeBack');
 	  $scope.isClickable = false;
+	  $scope.errorMessage = "";
 	});
 });
 
