@@ -207,7 +207,19 @@ a {
 	-webkit-filter: brightness(100%);
     filter: brightness(100%);
 }
-.errorMessage{
+.errorMessage1{
+	font-family: 'Raleway', sans-serif;
+	position:absolute;
+	transform: translate(-50%);
+	left: 50%;
+	top: 64vh;
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	text-align: center;
+	color: #ec5757;
+}
+.errorMessage2{
 	font-family: 'Raleway', sans-serif;
 	font-size: 15px;
 	letter-spacing: 2px;
