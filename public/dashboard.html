@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="dashboard.css">
+	</head>
+	<body>
+		<div class="header">
+			<nav class="navbar">
+				<h1 class="name">CORDIALLY</h1>
+			    <ul class="list-pages">
+					<li ><a href="#">FEATURES</a></li>
+				    <li ><a href="#">PRICING</a></li>
+			    </ul>
+			</nav>
+		</div>
+		<div class="userInfo">
+			<div class="left">
+				<h2 class="dashboard">DASHBOARD</h2>
+				<h3 class="welcome">WELCOME LUCAS</h3>
+				<div  class="photoDiv">
+					<img class="img-circle img-center photo" src="Assets/test.jpg">
+				</div>
+				<h4 class="availability">UPDATE AVAILABILITY</h4>
+				<div class="statusDiv">
+					<h5 class="status">AVAILABLE</h5>
+					<h5 class="status">UNAVAILABLE</h5>
+				</div>
+				
+			</div>
+			<div class="right">
+				<h4 class="meetings">MEETINGS</h4>
+				<div class="timeButtons">
+					<div class="col-md-3">
+						<button class="timeButton" id="custom">CUSTOM</button>
+						 <label class="switch">
+						 	<input type="checkbox">
+						 	<div class="slider round" id="switch1"></div>
+						</label>
+					</div>
+					<div class="col-md-3">
+						<button class="timeButton" id="min15">15 MINUTES</button>
+						<label class="switch" id="switch2">
+						    <input type="checkbox">
+							<div class="slider round" id="switch2"></div>
+						</label>
+					</div>
+					<div class="col-md-3">
+						<button class="timeButton" id="min30">30 MINUTES</button>
+						<label class="switch" id="switch3">
+					 		<input type="checkbox">
+					  		<div class="slider round" id="switch3"></div>
+						</label>
+					</div>
+					<div class="col-md-3">
+						<button class="timeButton" id="min60">60 MINUTES</button>
+						<label class="switch" id="switch4">
+					 		<input type="checkbox">
+					 		<div class="slider round" id="switch4"></div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

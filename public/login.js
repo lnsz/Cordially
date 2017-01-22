@@ -6,7 +6,6 @@ app.controller("ctrl", function($scope, $http){
 	$scope.errorMessage = "";
 
 	$scope.login =  function(){
-		console.log("Username: " + $scope.username + "\nPassword: " + $scope.password);
 		$http.post("/login", {
 			username: $scope.username, 
 			password: $scope.password
@@ -17,7 +16,6 @@ app.controller("ctrl", function($scope, $http){
 		});
 	}
 	$scope.createUser =  function(){
-		console.log("Username: " + $scope.username + "\nPassword: " + $scope.password);
 		$http.post("/createUser", {
 			username: $scope.username, 
 			password: $scope.password
@@ -27,4 +25,14 @@ app.controller("ctrl", function($scope, $http){
 			$scope.errorMessage = "USERNAME IS TAKEN";
 		});
 	};
+});
+
+$("#getstarted").click(function() {
+  $('#getstarted').addClass('fadeOut');
+  $('#emailTextbox').addClass('extend');
+  $('#loginButton').addClass('moveDown');
+  $('#loginButton').html('CREATE ACCOUNT');
+  $('#loginButton').attr('data-target', "");
+  $('#loginButton').attr('ng-click', "createUser()");
+  $('#createPassword').addClass('fadeIn');
 });

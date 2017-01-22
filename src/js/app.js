@@ -124,9 +124,25 @@ app.post("/schedule", function(req, res) {
 				var calendar = { _id: appointment.userID };
 				calendar[appointment.date] = [event];
 				calendars.insertOne(calendar)
-        res.status(200);
-        res.end();
+        		res.status(200);
+        		res.end();
 			}
 		});
 	})
 });
+
+app.get("/user", function(req, res) {
+	var usernameQuery = req.query.username;
+	console.log(usernameQuery);
+	db.collection("users", function(error, users){
+		users.findOne({ username: usernameQuery }, function(error, document){
+			if (document == null){
+				res.status(500).json({"error": "Username is invalid"});
+				res.end();
+			}else{
+				res.status(200);
+				res.end();
+			}
+		});
+	});
+})
