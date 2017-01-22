@@ -351,13 +351,16 @@ input:checked + .slider:before {
 }
 .weekdays {
     margin-top: 50px;
+    margin-left: 7vw;
+    width: 84vw;
     background-color: none;
 }
 
 .weekdays li {
 
     display: inline-block;
-    width: 13.6%;
+    width: 14%;
+
     color: #00A79D;
     text-align: center;
 }
@@ -365,21 +368,25 @@ input:checked + .slider:before {
 /* Days (1-31) */
 .days {
 
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
+	width: 84vw;
+    background: #FFF;
+    margin-left: 7vw;
+    display: inline-block;
 }
 
 .days li {
+	float: left;
+	position: relative;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #00A79D;
+	border-color: #000;
     list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    height: ;
+    width: 12.2%;
+    height: 120px;
     text-align: center;
-    margin-bottom: 5px;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 10px;
     font-size:12px;
     color:#000;
 }
@@ -390,13 +397,11 @@ input:checked + .slider:before {
     background: white;
     color:   #68c6bf !important
 }
-.datepickerdemoBasicUsage {
-  /** Demo styles for mdCalendar. */ }
-  .datepickerdemoBasicUsage md-content {
-    padding-bottom: 200px; }
-  .datepickerdemoBasicUsage .validation-messages {
-    font-size: 12px;
-    color: #dd2c00;
-    margin-left: 15px; }
+.day{
+	background: none;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
 
 
