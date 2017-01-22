@@ -407,7 +407,6 @@ a {
     box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
     z-index: -100;
 }
-<<<<<<< HEAD
 .pricing-info-header{
 	padding-top: 2.5em;
 	text-align: center;
@@ -445,7 +444,6 @@ a {
 	padding: 15px 0px 15px 0px;
 	width: 35%;
 }
-=======
 .preview{
 	margin-left: 80vh;
 	vertical-align: middle;
@@ -456,5 +454,4 @@ a {
 	position: relative;
 	margin-top: 50px;
 	margin-left: 20px;
->>>>>>> jessecordeiro/master
 }
