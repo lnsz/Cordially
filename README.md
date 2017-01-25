@@ -1,7 +1,4 @@
-# UofTHack2017
+<img src="http://i.imgur.com/YMqvNGG.png />
+# Cordially
 
-
-
-
-
-# END OF THE CODE 
+Cordially provides professionals with a simple and intuitive medium for scheduling meetings.
