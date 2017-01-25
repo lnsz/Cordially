@@ -19,7 +19,6 @@ app.controller("ctrl", function($scope, $http, $window){
 	}
 	$scope.createUser =  function(){
 		if($scope.isClickable){
-			console.log($scope.username);
 			$http.post("/createUser", {
 				username: $scope.username, 
 				password: $scope.password
